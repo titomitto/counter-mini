@@ -1,0 +1,14 @@
+targets:
+  $default:
+    sources:
+      - lib/**
+      - test/**
+      - integration_test/**
+      - $package$
+    builders:
+      bdd_widget_test|featureBuilder:
+        
+
+        generate_for:
+          - test/**
+          - integration_test/**

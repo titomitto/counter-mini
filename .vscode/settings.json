@@ -1,0 +1,19 @@
+{
+  "dart.flutterSdkPath": ".fvm/flutter_sdk",
+  "search.exclude": {
+    "**/.fvm": true
+  },
+  "files.watcherExclude": {
+    "**/.fvm": true
+  },
+  "java.configuration.updateBuildConfiguration": "disabled",
+  "dart.previewLsp": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.guides.indentation": true,
+  "cmake.ignoreCMakeListsMissing": true,
+  "livePreview.defaultPreviewPath": "/index.html"
+}

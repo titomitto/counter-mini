@@ -1,0 +1,33 @@
+name: counter_mini
+description: "Counter mini"
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  go_router: ^14.1.1
+  riverpod_annotation: ^2.3.5
+  flutter_riverpod: ^2.5.1
+  lucide_icons: ^0.257.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner:
+  integration_test:
+    sdk: flutter
+  bdd_widget_test: ^1.7.3
+  flutter_lints: ^5.0.0
+  riverpod_generator: ^2.4.0
+  custom_lint:
+  riverpod_lint:
+  lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.1
