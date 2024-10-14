@@ -1,10 +1,15 @@
-import 'package:counter_mini/main.dart';
+import 'package:counter_mini/counter/counter.dart';
+import 'package:counter_mini/counter/ui/notifiers/counter.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /// Usage: the increment value is set to <incrementValue>
 Future<void> theIncrementValueIsSetTo(
     WidgetTester tester, dynamic incrementValue) async {
-  var state = tester.state<MyHomePageState>(find.byType(MyHomePage));
+  var element = tester.element(find.byType(CounterScreen));
+  final container = ProviderScope.containerOf(element);
 
-  state.setIncrementValue(int.parse("$incrementValue"));
+  container
+      .read(counterProvider.notifier)
+      .setIncrementValue(int.parse("$incrementValue"));
 }

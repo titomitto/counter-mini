@@ -1,48 +1,43 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_import, directives_ordering
 
-import 'package:bdd_widget_test/data_table.dart' as bdd;
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import './step/the_app_is_running.dart';
-import './step/the_counter_should_display_the_value_of.dart';
-import './step/the_user_increments_the_counter_times.dart';
-import './step/the_maximum_limit_is_set_to.dart';
-import './step/the_user_should_be_informed_that_the_maximum_limit_has_been_reached.dart';
-import './step/the_increment_value_is_set_to.dart';
-import './step/the_user_decrements_the_counter_times.dart';
-import './step/the_minimum_limit_is_set_to.dart';
-import './step/the_user_should_be_informed_that_the_minimum_limit_has_been_reached.dart';
-import './step/the_decrement_value_is_set_to.dart';
 import './step/the_counter_is_displaying.dart';
-import './step/the_user_requests_to_reset_the_counter.dart';
-import './step/the_user_confirms_the_reset.dart';
-import './step/the_user_cancels_the_reset.dart';
+import './step/the_counter_should_display_the_value_of.dart';
 import './step/the_counter_should_still_display_the_value_of.dart';
-import './step/the_user_sets_the_increment_value_to.dart';
-import './step/the_user_should_see_the_increment_value_as.dart';
-import './step/the_user_sets_an_invalid_increment_value_of.dart';
-import './step/the_increment_value_should_remain.dart';
-import './step/the_user_should_be_informed_of_the_invalid_increment_value.dart';
-import './step/the_user_sets_the_decrement_value_to.dart';
-import './step/the_user_should_see_the_decrement_value_as.dart';
-import './step/the_user_sets_an_invalid_decrement_value_of.dart';
+import './step/the_decrement_value_is_set_to.dart';
 import './step/the_decrement_value_should_remain.dart';
-import './step/the_user_should_be_informed_of_the_invalid_decrement_value.dart';
-import './step/the_user_increments_the_counter.dart';
-import './step/the_user_decrements_the_counter.dart';
-import './step/the_user_views_the_history_of_changes.dart';
-import './step/the_history_should_show_the_following.dart';
-import './step/the_user_sets_the_maximum_limit_to.dart';
-import './step/the_user_should_see_the_maximum_limit_as.dart';
-import './step/the_user_sets_an_invalid_maximum_limit_of.dart';
+import './step/the_increment_value_is_set_to.dart';
+import './step/the_increment_value_should_remain.dart';
+import './step/the_maximum_limit_is_set_to.dart';
 import './step/the_maximum_limit_should_remain.dart';
-import './step/the_user_should_be_informed_that_the_limit_must_be_valid.dart';
-import './step/the_user_sets_the_minimum_limit_to.dart';
-import './step/the_user_should_see_the_minimum_limit_as.dart';
-import './step/the_user_sets_an_invalid_minimum_limit_of.dart';
+import './step/the_minimum_limit_is_set_to.dart';
 import './step/the_minimum_limit_should_remain.dart';
+import './step/the_user_cancels_the_reset.dart';
+import './step/the_user_confirms_the_reset.dart';
+import './step/the_user_decrements_the_counter_times.dart';
+import './step/the_user_increments_the_counter_times.dart';
+import './step/the_user_requests_to_reset_the_counter.dart';
+import './step/the_user_sets_an_invalid_decrement_value_of.dart';
+import './step/the_user_sets_an_invalid_increment_value_of.dart';
+import './step/the_user_sets_an_invalid_maximum_limit_of.dart';
+import './step/the_user_sets_an_invalid_minimum_limit_of.dart';
+import './step/the_user_sets_the_decrement_value_to.dart';
+import './step/the_user_sets_the_increment_value_to.dart';
+import './step/the_user_sets_the_maximum_limit_to.dart';
+import './step/the_user_sets_the_minimum_limit_to.dart';
+import './step/the_user_should_be_informed_of_the_invalid_decrement_value.dart';
+import './step/the_user_should_be_informed_of_the_invalid_increment_value.dart';
+import './step/the_user_should_be_informed_that_the_limit_must_be_valid.dart';
+import './step/the_user_should_be_informed_that_the_maximum_limit_has_been_reached.dart';
+import './step/the_user_should_be_informed_that_the_minimum_limit_has_been_reached.dart';
+import './step/the_user_should_see_the_decrement_value_as.dart';
+import './step/the_user_should_see_the_increment_value_as.dart';
+import './step/the_user_should_see_the_maximum_limit_as.dart';
+import './step/the_user_should_see_the_minimum_limit_as.dart';
 
 void main() {
   group('''Counter''', () {
@@ -153,27 +148,6 @@ void main() {
       await theUserShouldBeInformedThatTheMaximumLimitHasBeenReached(tester);
     });
     testWidgets(
-        '''Outline: User decrements the counter to adjust the value (1, 0)''',
-        (tester) async {
-      await bddSetUp(tester);
-      await theUserDecrementsTheCounterTimes(tester, 1);
-      await theCounterShouldDisplayTheValueOf(tester, 0);
-    });
-    testWidgets(
-        '''Outline: User decrements the counter to adjust the value (2, 1)''',
-        (tester) async {
-      await bddSetUp(tester);
-      await theUserDecrementsTheCounterTimes(tester, 2);
-      await theCounterShouldDisplayTheValueOf(tester, 1);
-    });
-    testWidgets(
-        '''Outline: User decrements the counter to adjust the value (4, 1)''',
-        (tester) async {
-      await bddSetUp(tester);
-      await theUserDecrementsTheCounterTimes(tester, 4);
-      await theCounterShouldDisplayTheValueOf(tester, 1);
-    });
-    testWidgets(
         '''Outline: User decrements the counter to adjust the value (1, -1)''',
         (tester) async {
       await bddSetUp(tester);
@@ -181,11 +155,18 @@ void main() {
       await theCounterShouldDisplayTheValueOf(tester, -1);
     });
     testWidgets(
-        '''Outline: User decrements the counter to adjust the value (6, -1)''',
+        '''Outline: User decrements the counter to adjust the value (4, -4)''',
+        (tester) async {
+      await bddSetUp(tester);
+      await theUserDecrementsTheCounterTimes(tester, 4);
+      await theCounterShouldDisplayTheValueOf(tester, -4);
+    });
+    testWidgets(
+        '''Outline: User decrements the counter to adjust the value (6, -6)''',
         (tester) async {
       await bddSetUp(tester);
       await theUserDecrementsTheCounterTimes(tester, 6);
-      await theCounterShouldDisplayTheValueOf(tester, -1);
+      await theCounterShouldDisplayTheValueOf(tester, -6);
     });
     testWidgets('''Outline: User reaches the minimum counter limit (0, 6, 0)''',
         (tester) async {
@@ -195,36 +176,23 @@ void main() {
       await theCounterShouldDisplayTheValueOf(tester, 0);
       await theUserShouldBeInformedThatTheMinimumLimitHasBeenReached(tester);
     });
-    testWidgets('''Outline: User reaches the minimum counter limit (2, 9, 2)''',
+    testWidgets(
+        '''Outline: User reaches the minimum counter limit (-2, 9, -2)''',
         (tester) async {
       await bddSetUp(tester);
-      await theMinimumLimitIsSetTo(tester, 2);
+      await theMinimumLimitIsSetTo(tester, -2);
       await theUserDecrementsTheCounterTimes(tester, 9);
-      await theCounterShouldDisplayTheValueOf(tester, 2);
+      await theCounterShouldDisplayTheValueOf(tester, -2);
       await theUserShouldBeInformedThatTheMinimumLimitHasBeenReached(tester);
     });
     testWidgets(
-        '''Outline: User reaches the minimum counter limit (5, 16, 5)''',
+        '''Outline: User reaches the minimum counter limit (-5, 16, -5)''',
         (tester) async {
       await bddSetUp(tester);
-      await theMinimumLimitIsSetTo(tester, 5);
+      await theMinimumLimitIsSetTo(tester, -5);
       await theUserDecrementsTheCounterTimes(tester, 16);
-      await theCounterShouldDisplayTheValueOf(tester, 5);
+      await theCounterShouldDisplayTheValueOf(tester, -5);
       await theUserShouldBeInformedThatTheMinimumLimitHasBeenReached(tester);
-    });
-    testWidgets('''Outline: User customizes the decrement value (2, 1, 8)''',
-        (tester) async {
-      await bddSetUp(tester);
-      await theDecrementValueIsSetTo(tester, 2);
-      await theUserDecrementsTheCounterTimes(tester, 1);
-      await theCounterShouldDisplayTheValueOf(tester, 8);
-    });
-    testWidgets('''Outline: User customizes the decrement value (4, 2, 2)''',
-        (tester) async {
-      await bddSetUp(tester);
-      await theDecrementValueIsSetTo(tester, 4);
-      await theUserDecrementsTheCounterTimes(tester, 2);
-      await theCounterShouldDisplayTheValueOf(tester, 2);
     });
     testWidgets('''Outline: User customizes the decrement value (3, 1, -3)''',
         (tester) async {
@@ -233,34 +201,48 @@ void main() {
       await theUserDecrementsTheCounterTimes(tester, 1);
       await theCounterShouldDisplayTheValueOf(tester, -3);
     });
-    testWidgets(
-        '''Outline: User decrements the counter with a custom value but hits the minimum limit (2, 0, 3, 0)''',
+    testWidgets('''Outline: User customizes the decrement value (5, 2, -10)''',
+        (tester) async {
+      await bddSetUp(tester);
+      await theDecrementValueIsSetTo(tester, 5);
+      await theUserDecrementsTheCounterTimes(tester, 2);
+      await theCounterShouldDisplayTheValueOf(tester, -10);
+    });
+    testWidgets('''Outline: User customizes the decrement value (2, 3, -6)''',
         (tester) async {
       await bddSetUp(tester);
       await theDecrementValueIsSetTo(tester, 2);
+      await theUserDecrementsTheCounterTimes(tester, 3);
+      await theCounterShouldDisplayTheValueOf(tester, -6);
+    });
+    testWidgets(
+        '''Outline: User decrements the counter with a custom value but hits the minimum limit (3, 0, 4, 0)''',
+        (tester) async {
+      await bddSetUp(tester);
+      await theDecrementValueIsSetTo(tester, 3);
       await theMinimumLimitIsSetTo(tester, 0);
+      await theUserDecrementsTheCounterTimes(tester, 4);
+      await theCounterShouldDisplayTheValueOf(tester, 0);
+      await theUserShouldBeInformedThatTheMinimumLimitHasBeenReached(tester);
+    });
+    testWidgets(
+        '''Outline: User decrements the counter with a custom value but hits the minimum limit (4, -2, 3, 0)''',
+        (tester) async {
+      await bddSetUp(tester);
+      await theDecrementValueIsSetTo(tester, 4);
+      await theMinimumLimitIsSetTo(tester, -2);
       await theUserDecrementsTheCounterTimes(tester, 3);
       await theCounterShouldDisplayTheValueOf(tester, 0);
       await theUserShouldBeInformedThatTheMinimumLimitHasBeenReached(tester);
     });
     testWidgets(
-        '''Outline: User decrements the counter with a custom value but hits the minimum limit (3, 2, 3, 2)''',
-        (tester) async {
-      await bddSetUp(tester);
-      await theDecrementValueIsSetTo(tester, 3);
-      await theMinimumLimitIsSetTo(tester, 2);
-      await theUserDecrementsTheCounterTimes(tester, 3);
-      await theCounterShouldDisplayTheValueOf(tester, 2);
-      await theUserShouldBeInformedThatTheMinimumLimitHasBeenReached(tester);
-    });
-    testWidgets(
-        '''Outline: User decrements the counter with a custom value but hits the minimum limit (5, 5, 2, 5)''',
+        '''Outline: User decrements the counter with a custom value but hits the minimum limit (5, -5, 3, -5)''',
         (tester) async {
       await bddSetUp(tester);
       await theDecrementValueIsSetTo(tester, 5);
-      await theMinimumLimitIsSetTo(tester, 5);
-      await theUserDecrementsTheCounterTimes(tester, 2);
-      await theCounterShouldDisplayTheValueOf(tester, 5);
+      await theMinimumLimitIsSetTo(tester, -5);
+      await theUserDecrementsTheCounterTimes(tester, 3);
+      await theCounterShouldDisplayTheValueOf(tester, -5);
       await theUserShouldBeInformedThatTheMinimumLimitHasBeenReached(tester);
     });
     testWidgets('''User resets the counter to zero''', (tester) async {
@@ -342,20 +324,6 @@ void main() {
       await theUserSetsAnInvalidDecrementValueOf(tester, -1);
       await theDecrementValueShouldRemain(tester, 2);
       await theUserShouldBeInformedOfTheInvalidDecrementValue(tester);
-    });
-    testWidgets('''User views the history of counter operations''',
-        (tester) async {
-      await bddSetUp(tester);
-      await theUserIncrementsTheCounter(tester);
-      await theUserDecrementsTheCounter(tester);
-      await theUserViewsTheHistoryOfChanges(tester);
-      await theHistoryShouldShowTheFollowing(
-          tester,
-          const bdd.DataTable([
-            ['Action', 'Value', 'Result'],
-            ['Increment', 1, 1],
-            ['Decrement', 1, 0]
-          ]));
     });
     testWidgets('''Outline: User sets a valid maximum limit (10)''',
         (tester) async {

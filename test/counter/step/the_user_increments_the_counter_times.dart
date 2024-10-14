@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 Future<void> theUserIncrementsTheCounterTimes(
     WidgetTester tester, dynamic times) async {
   for (var i = 0; i < times; i++) {
-    await tester.tap(find.byKey(const ValueKey('increment')));
+    await tester.tap(find.byKey(const ValueKey('incrementButton')));
     await tester.pumpAndSettle();
   }
 }

@@ -1,10 +1,15 @@
-import 'package:counter_mini/main.dart';
+import 'package:counter_mini/counter/counter.dart';
+import 'package:counter_mini/counter/ui/notifiers/counter.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /// Usage: the maximum limit is set to <limitValue>
 Future<void> theMaximumLimitIsSetTo(
     WidgetTester tester, dynamic limitValue) async {
-  var state = tester.state<MyHomePageState>(find.byType(MyHomePage));
+  var element = tester.element(find.byType(CounterScreen));
+  final container = ProviderScope.containerOf(element);
 
-  state.setMaximumLimit(int.parse("$limitValue"));
+  container
+      .read(counterProvider.notifier)
+      .setMaximumLimit(int.parse("$limitValue"));
 }

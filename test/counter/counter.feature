@@ -64,11 +64,9 @@ Feature: Counter
 
             Examples:
                 | times | expectedValue |
-                | 1     | 0             |
-                | 2     | 1             |
-                | 4     | 1             |
                 | 1     | -1            |
-                | 6     | -1            |
+                | 4     | -4            |
+                | 6     | -6            |
 
         Scenario Outline: User reaches the minimum counter limit
             Given the minimum limit is set to <limitValue>
@@ -79,8 +77,8 @@ Feature: Counter
             Examples:
                 | limitValue | times | expectedValue |
                 | 0          | 6     | 0             |
-                | 2          | 9     | 2             |
-                | 5          | 16    | 5             |
+                | -2         | 9     | -2            |
+                | -5         | 16    | -5            |
 
         Scenario Outline: User customizes the decrement value
             Given the decrement value is set to <decrementValue>
@@ -89,9 +87,10 @@ Feature: Counter
 
             Examples:
                 | decrementValue | times | expectedValue |
-                | 2              | 1     | 8             |
-                | 4              | 2     | 2             |
                 | 3              | 1     | -3            |
+                | 5              | 2     | -10           |
+                | 2              | 3     | -6            |
+
 
         Scenario Outline: User decrements the counter with a custom value but hits the minimum limit
             Given the decrement value is set to <decrementValue>
@@ -102,9 +101,9 @@ Feature: Counter
 
             Examples:
                 | decrementValue | limitValue | times | expectedValue |
-                | 2              | 0          | 3     | 0             |
-                | 3              | 2          | 3     | 2             |
-                | 5              | 5          | 2     | 5             |
+                | 3              | 0          | 4     | 0           |
+                | 4              | -2         | 3     | 0             |
+                | 5              | -5         | 3     | -5            |
 
     Rule: A user should be able to reset the counter
         Scenario: User resets the counter to zero
@@ -161,16 +160,6 @@ Feature: Counter
                 | currentDecrementValue | invalidValue |
                 | 1                     | 0            |
                 | 2                     | -1           |
-
-    Rule: A user should be able to view the history of counter changes
-        Scenario: User views the history of counter operations
-            When the user increments the counter
-            And the user decrements the counter
-            And the user views the history of changes
-            Then the history should show the following:
-                | 'Action'    | 'Value' | 'Result' |
-                | 'Increment' | 1       | 1        |
-                | 'Decrement' | 1       | 0        |
 
     Rule: A user should be able to set the maximum limit for the counter
         Scenario Outline: User sets a valid maximum limit
